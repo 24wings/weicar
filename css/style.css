@@ -1,0 +1,205 @@
+/** 清除内外边距 **/
+* {
+    margin: 0;
+    padding: 0;
+}
+h1 h2 h3 h4 h5 h6{
+    font-size: 100%;
+}
+a/*去下划线 设置颜色*/{
+    text-decoration: none;
+    color: #000;
+}
+li ,ul, ol{list-style-type: none;}
+body/*设置字体*/{
+    font-size: 14px;
+    font-family: "方正兰亭黑",arial;
+}
+img/*去默认边框*/{
+    border:0;
+}
+select,input/*去默认边框*/{
+    outline: none;
+}
+button{
+    outline: none;
+}
+
+html {
+    font-size: 16px;
+}
+
+@media screen and (min-width: 375px) {
+    html {
+        /* iPhone6的375px尺寸作为16px基准，414px正好18px大小, 600 20px */
+        font-size: calc(100% + 2 * (100vw - 375px) / 39);
+        font-size: calc(16px + 2 * (100vw - 375px) / 39);
+    }
+}
+@media screen and (min-width: 414px) {
+    html {
+        /* 414px-1000px每100像素宽字体增加1px(18px-22px) */
+        font-size: calc(112.5% + 4 * (100vw - 414px) / 586);
+        font-size: calc(18px + 4 * (100vw - 414px) / 586);
+    }
+}
+@media screen and (min-width: 600px) {
+    html {
+        /* 600px-1000px每100像素宽字体增加1px(20px-24px) */
+        font-size: calc(125% + 4 * (100vw - 600px) / 400);
+        font-size: calc(20px + 4 * (100vw - 600px) / 400);
+    }
+}
+@media screen and (min-width: 1000px) {
+    html {
+        /* 1000px往后是每100像素0.5px增加 */
+        font-size: calc(137.5% + 6 * (100vw - 1000px) / 1000);
+        font-size: calc(22px + 6 * (100vw - 1000px) / 1000);
+    }
+}
+
+
+/*****      样式开始         ********/
+body{
+    background: #f4f3f3;
+}
+.nav{
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    background:#0a76c2;
+}
+.nav>a{
+    flex:1;
+    display: block;
+    padding: 1rem;
+    font-size: 1.4rem;
+    color: #fff;
+    
+    text-align: center;
+}
+.bg{
+    background:#0096ff!important;
+}
+.navs{
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+
+}
+.navs>ol{
+    flex:1;
+    display: block;
+    font-size: 1rem;
+    color: #666666;
+    text-align: center;
+}
+.diyi>ol:nth-child(1) i{
+    color: #f3b163;
+}
+.diyi>ol:nth-child(2) i{
+    color: #35afff;
+}
+.diyi>ol:nth-child(3) i{
+    color: #1a9027;
+}
+.diyi>ol:nth-child(4) i{
+    color: #fb4715;
+}
+
+.dier>ol:nth-child(1) i{
+    color: #0096ff;
+}
+.dier>ol:nth-child(2) i{
+    color: #ffed53;
+}
+.dier>ol:nth-child(3) i{
+    color: #eacc2e;
+}
+.dier>ol:nth-child(4) i{
+    color: #5f0000;
+}
+
+.dier{
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+.navs>ol>i{
+    font-size: 1.4rem;
+    line-height: 3rem;
+    
+}
+.navs>ol>li{
+    font-size: 0.8rem;
+    color: #666666;
+}
+.content{
+    width: 100%;
+    height: 27rem;
+    overflow: hidden;
+    text-align: center;
+    
+}
+.content h3{
+    font-size:1.3rem;
+    color: #666;
+    line-height: 5rem;
+}
+.content-box{
+    width: 18rem;
+    height: 16rem;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    margin: 0 auto;
+}
+.form-box{
+    width: 100%;
+    height: 1.5rem;
+    display: flex;
+    display: -webkit-flex;
+    margin-top: 1.5rem;
+
+}
+.form-box label{
+    flex:0.8;
+    
+}
+.form-box span{
+    flex:0.4;
+    
+}
+.form-box label i{
+    font-size: 1.6rem;
+}
+.form-box input{
+    flex:3;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: #f4f3f3;
+    text-indent: 1rem;
+}
+.form-box select{
+    flex:3;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: #f4f3f3;
+    text-indent: 1rem;
+}
+.content-box .form-box:nth-child(3) label i{
+    color: #1a9027;
+}
+.content-box .form-box:nth-child(1) label i{
+    color: #9de5fd;
+}
+.content-box .form-box:nth-child(2) label i{
+    color: #ff7b24;
+}
+.ti{
+    width: 70%;
+    height: 2.5rem;
+    border: none;
+    background: #ff6000;
+    color: #fff;
+    margin-top: 2rem;
+    border: 1px solid #ccc;
+}
