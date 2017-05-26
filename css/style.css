@@ -87,36 +87,44 @@ body{
     display: -webkit-flex;
 
 }
-.navs>ol{
+.navs>a{
+    flex:1;
+    display: block;
+    font-size: 1rem;
+    color: #666666;
+    text-align: center;
+
+}
+.navs ol{
     flex:1;
     display: block;
     font-size: 1rem;
     color: #666666;
     text-align: center;
 }
-.diyi>ol:nth-child(1) i{
+.diyi ol:nth-child(1) i{
     color: #f3b163;
 }
-.diyi>ol:nth-child(2) i{
+.diyi ol:nth-child(2) i{
     color: #35afff;
 }
-.diyi>ol:nth-child(3) i{
+.diyi ol:nth-child(3) i{
     color: #1a9027;
 }
-.diyi>ol:nth-child(4) i{
+.diyi ol:nth-child(4) i{
     color: #fb4715;
 }
 
-.dier>ol:nth-child(1) i{
+.dier ol:nth-child(1) i{
     color: #0096ff;
 }
-.dier>ol:nth-child(2) i{
+.dier ol:nth-child(2) i{
     color: #ffed53;
 }
-.dier>ol:nth-child(3) i{
+.dier ol:nth-child(3) i{
     color: #eacc2e;
 }
-.dier>ol:nth-child(4) i{
+.dier ol:nth-child(4) i{
     color: #5f0000;
 }
 
@@ -124,7 +132,7 @@ body{
     padding-bottom: 1rem;
     border-bottom: 1px solid #ccc;
 }
-.navs>ol>i{
+.navs>a>ol>i{
     font-size: 1.4rem;
     line-height: 3rem;
     
@@ -147,14 +155,14 @@ body{
 }
 .content-box{
     width: 18rem;
-    height: 16rem;
+    height: 19rem;
     border: 1px solid #ccc;
     border-radius: 1px;
     margin: 0 auto;
 }
 .form-box{
     width: 100%;
-    height: 1.5rem;
+    height: 1.8rem;
     display: flex;
     display: -webkit-flex;
     margin-top: 1.5rem;
@@ -185,6 +193,14 @@ body{
     background: #f4f3f3;
     text-indent: 1rem;
 }
+.form-box textarea{
+    flex:3;
+    height: 2rem;
+    border: none;
+    border: 1px solid #ccc;
+    background: #f4f3f3;
+    text-indent: 1rem;
+}
 .content-box .form-box:nth-child(3) label i{
     color: #1a9027;
 }
@@ -194,6 +210,12 @@ body{
 .content-box .form-box:nth-child(2) label i{
     color: #ff7b24;
 }
+.content-box .form-box:nth-child(5) label i{
+    color: #f9af3b;
+}
+.content-box .form-box:nth-child(4) label i{
+    color: #fa5402;
+}
 .ti{
     width: 70%;
     height: 2.5rem;
@@ -202,4 +224,25 @@ body{
     color: #fff;
     margin-top: 2rem;
     border: 1px solid #ccc;
+}
+.act{
+    color: #fb862c!important;
+}
+.actu{
+    color: #666!important;
+}
+.cost{
+    width: 100%;
+    text-align: center;
+    color: #ff6000;
+    font-size: 1rem;
+    line-height: 3rem;
+}
+.cost span{
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+.cost i{
+    font-size: 1.6rem;
+    color: #f7e01d;
 }
