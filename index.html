@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="font_g8fib8qcwpg2pgb9/iconfont.css">
 </head>
+
 <body>
     <div class="nav">
         <a href="" class="bg">用车</a>
@@ -49,9 +51,16 @@
         </ol>
     </ul>
     <div class="content">
+        <h3 style="text-align:center" class="title">接站</h3>
         <h3>您附近暂时没有专车</h3>
         <div class="content-box">
             <form action="">
+                <div class="form-box" class="search">
+                    <label for=""><i class="iconfont"></i></label>
+                    <input type="text" value="接站地址">
+                    <span></span>
+                </div>
+
                 <div class="form-box">
                     <label for=""><i class="iconfont">&#xe601;</i></label>
                     <select name="sss">
@@ -89,5 +98,20 @@
         </div>
         <input type="button" value="提交" class="ti">
     </div>
+    <script src="/js/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(function() {
+            if (location.search) {
+                var title = decodeURI(location.search.replace('?', ''));
+                $('.title').text(title)
+                $('.search input').val(title);
+            }
+            $('.navs ol ').click(function() {
+                location.search = '?' + $(this).find('li').text();
+                // location.reload()
+            });
+        })
+    </script>
 </body>
+
 </html>
