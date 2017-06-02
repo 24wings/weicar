@@ -11,27 +11,30 @@
 
 <body>
     <div class="nav">
-        <a href="" class="bg">用车</a>
-        <a href="">跑腿</a>
+        <a onclick="showTab(0)" class="bg">出行订车</a>
+        <a onclick="showTab(1)">增值服务</a>
+        <a onclick="showTab(2)">会员中心</a>
     </div>
+    <div class="tab">
     <ul class="navs diyi">
         <ol>
             <i class="iconfont">&#xe669;</i>
-            <li>接站</li>
+            <li>热搜酒店</li>
         </ol>
         <ol>
             <i class="iconfont">&#xe70a;</i>
-            <li>送站</li>
+            <li>直通高铁</li>
         </ol>
         <ol>
             <i class="iconfont">&#xe642;</i>
-            <li>接机</li>
+            <li>自助值机</li>
         </ol>
         <ol>
             <i class="iconfont">&#xe727;</i>
-            <li>送机</li>
+            <li>精品旅游</li>
         </ol>
     </ul>
+    <!--
     <ul class="navs dier">
         <ol>
             <i class="iconfont">&#xe78c;</i>
@@ -50,8 +53,55 @@
             <li>半日租</li>
         </ol>
     </ul>
-    <div class="content">
-        <h3 style="text-align:center" class="title">接站</h3>
+    -->
+    <div class="content ">
+        <h3 style="text-align:center" class="title">热搜酒店</h3>
+        <div class="place-box">
+        <img style="width:60vw;float:left" src="http://img1.qunarzz.com/desmisact/images/1702/b8/6e796520810a04.jpg">
+        <div class="content" style="width:40vw;float:right">
+            <h2 >木兰草原</h2>
+            <p>精品五日+下单立减+尊贵享受</p>
+            <p>距您 2.2 公里</p>
+        </div>
+
+</div>
+
+  <div class="place-box">
+        <img style="width:60vw;float:left" src="http://img1.qunarzz.com/desmisact/images/1702/b8/6e796520810a04.jpg">
+        <div class="content" style="width:40vw;float:right;height:100%">
+            <h2 >木兰草原</h2>
+            <p>精品五日+下单立减+尊贵享受</p>
+            <p>据您 3.1公里</p>
+        </div>
+        
+</div>
+    </div>
+    </div>
+
+
+<!-- 第二个页面 -->
+    <div class="tab">
+    <ul class="navs dier">
+        <ol>
+            <i class="iconfont">&#xe669;</i>
+            <li onclick="location.reload()">分享抢优惠</li>
+        </ol>
+        <ol>
+            <i class="iconfont">&#xe70a;</i>
+            <li onclick="location.reload()">私人订制</li>
+        </ol>
+        <ol>
+            <i class="iconfont">&#xe642;</i>
+            <li onclick="location.reload()">旅游+豪轮</li>
+        </ol>
+        <ol>
+            <i class="iconfont">&#xe727;</i>
+            <li onclick="location.reload()">在线客服</li>
+        </ol>
+    </ul>
+ 
+    <div class="content ">
+        <h3 style="text-align:center" class="title">热搜酒店</h3>
         <h3>您附近暂时没有专车</h3>
         <div class="content-box">
             <form action="">
@@ -98,19 +148,78 @@
         </div>
         <input type="button" value="提交" class="ti">
     </div>
+    </div>
+
+    <div class="tab">
+        <ul class="navs dier">
+        <ol>
+            <i class="iconfont">&#xe669;</i>
+            <li>我要注册</li>
+        </ol>
+        <ol>
+            <i class="iconfont">&#xe70a;</i>
+            <li>名人堂</li>
+        </ol>
+        <ol>
+            <i class="iconfont">&#xe642;</i>
+            <li>会员之家</li>
+        </ol>
+    </ul>
+ 
+    <div class="content ">
+        <h3 style="text-align:center" >登录</h3>
+
+        <h3>您附近暂时没有专车</h3>
+        <div class="content-box">
+            <form action="">
+                <div class="form-box" class="search">
+                    <label for=""><i class="iconfont"></i></label>
+                    <input type="text" placeholder="用户名">
+                    <span></span>
+                </div>
+
+<div class="form-box" class="search">
+                    <label for=""><i class="iconfont"></i></label>
+                    <input type="password" placeholder="密码">
+                    <span></span>
+                </div>
+
+    <button style="width:60vw;background:green;height:40px;color:#fff;margin-top:50px;">  登录</button>
+            </form>
+
+        </div>
+        <button type="button" value="提交" class="ti">登录</div>
+    </div>
+    </div>
+
     <script src="./js/jquery/dist/jquery.min.js"></script>
     <script>
+
+function showTab(index){
+            $('.tab').hide();
+            $('.tab').eq(index).show();
+
+        }
+        
+        showTab(0);
+            
         $(function() {
+
+        
+
             if (location.search) {
                 var title = decodeURI(location.search.replace('?', ''));
                 $('.title').text(title)
                 $('.search input').val(title);
             }
-            $('.navs ol ').click(function() {
+            $('.navs:first ol ') .click(function() {
                 location.search = '?' + $(this).find('li').text();
                 // location.reload()
             });
-        })
+        });
+
+
+
     </script>
 </body>
 
