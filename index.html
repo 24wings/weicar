@@ -84,24 +84,24 @@
     <ul class="navs dier">
         <ol>
             <i class="iconfont">&#xe669;</i>
-            <li onclick="location.reload()">分享抢优惠</li>
+            <li >分享抢优惠</li>
         </ol>
         <ol>
             <i class="iconfont">&#xe70a;</i>
-            <li onclick="location.reload()">私人订制</li>
+            <li >私人订制</li>
         </ol>
         <ol>
             <i class="iconfont">&#xe642;</i>
-            <li onclick="location.reload()">旅游+豪轮</li>
+            <li >旅游+豪轮</li>
         </ol>
         <ol>
             <i class="iconfont">&#xe727;</i>
-            <li onclick="location.reload()">在线客服</li>
+            <li >在线客服</li>
         </ol>
     </ul>
  
     <div class="content ">
-        <h3 style="text-align:center" class="title">热搜酒店</h3>
+        <h3 style="text-align:center" class="title2">热搜酒店</h3>
         <h3>您附近暂时没有专车</h3>
         <div class="content-box">
             <form action="">
@@ -212,10 +212,17 @@ function showTab(index){
                 $('.title').text(title)
                 $('.search input').val(title);
             }
-            $('.navs:first ol ') .click(function() {
+            $('.navs').eq(0).find ('ol') .click(function() {
                 location.search = '?' + $(this).find('li').text();
                 // location.reload()
             });
+            $('.navs').eq(1).find('ol ').click(function(){
+                var text=$(this).find('li').text();
+                $('.title2').text(text);
+
+            })
+
+
         });
 
 
