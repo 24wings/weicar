@@ -203,3 +203,40 @@ body{
     margin-top: 2rem;
     border: 1px solid #ccc;
 }
+
+
+
+
+
+
+.place-box{
+        display: block;
+    width: 100vw;
+    margin-bottom: 16px;
+    cursor: pointer;
+    border: 1px solid #eee;
+        height: 201px;
+
+}
+
+.place-box img{
+        width: 60vw;
+    /* float: left; */
+    text-align: left;
+    height: 94%;
+}
+
+.place-box  .content{
+        width: 40vw;
+    float: right;
+    height: 100%;
+    vertical-align: middle;
+}
+.place-box  .content h2{
+    background:#3bb0d0;color:#fff;
+    margin-bottom: 20%;
+}
+
+.place-box .content p {
+    margin-bottom: 20%;
+}
