@@ -225,7 +225,12 @@ function showTab(index){
 
         });
 
+        $.ajax('http://apis.haoservice.com/lifeservice/travel/HotelList?cityid=37&page=1&key=0b493bfbdccc4d5cbdaf076323965a3c',{
+            success:function(rtn){
+                console.log(rtn);
 
+            }
+        })
 
     </script>
 </body>
